@@ -15,3 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', 'selectController@onSelect');
+
+Route::get('/insert', 'selectController@insertform');
+
+Route::post('/insertData', 'selectController@onInsert');
