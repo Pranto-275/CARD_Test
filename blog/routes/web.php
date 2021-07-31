@@ -18,4 +18,14 @@ Route::get('/', 'selectController@onSelect');
 
 Route::get('/insert', 'selectController@insertform');
 
+
+
+
 Route::post('/insertData', 'selectController@onInsert');
+
+
+
+
+Route::get('/delete', 'selectController@deleteform');
+
+Route::post('/deleteData', 'selectController@onDelete');

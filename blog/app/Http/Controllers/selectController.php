@@ -36,4 +36,25 @@ class selectController extends Controller
     {
         return view('Insert');
     }
+
+
+    public function deleteform()
+    {
+        return view('Delete');
+    }
+
+
+    function onDelete(Request $req)
+    {
+        $name = $req->input('name');
+
+        $result = DB::delete('delete from students where name = ?', [$name]);
+
+        if ($result == true) {
+
+            return "Succcess";
+        } else {
+            return "fail";
+        }
+    }
 }
